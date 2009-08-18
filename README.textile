@@ -1,0 +1,11 @@
+h1. Hubbub
+
+h4. Custom website framework centered around Meetup.com
+
+*Features*
+
+* Simple CMS
+* Meetup.com integration - view & rsvp for upcoming group meetups
+* Dedicated group blog(s) - for posting info about meetups or post talk or content relevant to the group
+* Aggregated Member Blog
+* Aggregated Twitter Feed
