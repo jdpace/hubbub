@@ -1,0 +1,9 @@
+.DS_Store
+config/database.yml
+tmp/*
+db/*.sqlite3
+log/*
+vendor/rails
+public/javascripts/site.js
+public/stylesheets/site.css
+public/system
