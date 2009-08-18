@@ -9,3 +9,7 @@ h4. Custom website framework centered around Meetup.com
 * Dedicated group blog(s) - for posting info about meetups or post talk or content relevant to the group
 * Aggregated Member Blog
 * Aggregated Twitter Feed
+
+*Possible Features*
+
+* User profile pages (bio, meetups attended, Meetup.com groups)
