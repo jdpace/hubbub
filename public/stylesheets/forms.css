@@ -1,0 +1,229 @@
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+form.hidden {
+  display: none;
+}
+
+form span.required {
+  display: block;
+  margin-bottom: 1.0em;
+}
+
+fieldset {
+  display: block;
+  background-color: #F6FFDF;
+  border-top: 2px solid #B0BC66;
+  border-bottom: 2px solid #B0BC66;
+  padding: 20px 8px;
+  margin-bottom: 2em;
+}
+
+fieldset legend {
+  font-size: 1.27em;
+  padding: 0 4px;
+}
+
+form div {
+  clear: left;
+  margin: 0;
+  padding: 5px 0 16px 0;
+  padding-left: 155px; /*width of left column containing the label elements*/
+  height: 1%;
+}
+
+form div.nested_resources { padding: 1em 0 0 0; border-top: 1px dashed #B5BF9B; }
+form div.nested_resource  { padding: 0 0 .5em 0; margin-bottom: 1em; border-bottom: 1px dashed #B5BF9B;}
+
+form div.textile, form div.textile div { clear: none; }
+
+form.button-to { display:inline;}
+
+form.button-to div {
+  clear: none;
+  padding: 0;
+  border: none;
+  height: auto;
+  display:inline;
+}
+
+form.button-to input{
+  background: none;
+  border: none;
+  color: #ED1C24;
+  border-bottom: 1px solid #ED1C24;
+  text-decoration: underline;
+  padding: 0;
+  height: 1.2em;
+  cursor: pointer;
+  paddding-bottom: 1px;
+}
+
+form div.fieldWithErrors { 
+  display: inline;
+  clear: none;
+  padding: 0;
+  border-top: none;
+  height: auto;
+}
+
+form div.hidden {
+  border: none;
+  padding: 0;
+}
+
+form div.errorExplanation {
+  padding: 1.5em 1em !important; 
+  margin-bottom: 2em;
+  border: 1px solid #FF1111;
+  border-left: none; border-right: none;
+  background-color: #EFE0E0;
+}
+
+form div.errorExplanation h2 {
+  color: #FF1111;
+}
+
+
+form div.errorExplanation li {
+  margin-left: 2.0em;
+  list-style: square;
+  color: #FF1111;
+}
+
+div.fieldWithErrors label {
+  color: #FF1111;
+}
+
+form div.first {
+  border-top: none;
+}
+
+form div span {
+  color: #3D3F37;
+  font-size: 0.91em;
+  display: block;
+  margin-top: 0.4em;
+}
+
+form div span.important {
+  color: #FF1111;
+}
+
+form label {
+  font-weight: normal;
+  float: left;
+  margin: 0.3em 0 8px -155px; /*width of left column*/
+  width: 150px; /*width of labels. Should be smaller than left column (155px) to create some right margin*/
+}
+
+form label.inline {
+  float: none;
+  margin: 0;
+  line-height: inherit;
+  width: auto;
+  display: inline;
+}
+
+form div.required label {
+  font-weight: bold;
+}
+
+form.preferences label { float: none; margin: 0 0.5em 0 0;}
+
+input.checkbox {
+  position: relative;
+  top: 3px;
+}
+
+input.text { 
+  width: 240px;
+  padding: 0.2em 0.2em;
+}
+
+textarea {
+  width: 240px;
+  height: 150px;
+  padding: 0.2em;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+textarea.full {
+  width: 97%;
+  height: 300px;
+}
+
+textarea.short {
+  height: 150px;
+}
+
+textarea.supershort { height: 5em; }
+
+div.fieldWithErrors label {
+  color: #FF1111;
+}
+
+div.errors-seen label { color:inherit; }
+
+form div.clear, form div.clear-left, form div.clear-right {
+  border-top: none;
+  padding: 0;
+}
+
+form div#tags { padding: 0;}
+
+form div.checkbox { padding-left:20px; position: relative;}
+form div.checkbox label { float: none; margin-left: 0;}
+form div.checkbox input { float: left; position:absolute; left: 0px; top:3px; padding:0;}
+
+form div.radio label { float: none; margin-left: 0; }
+
+/* Legal Agreements - look like text areas */
+.legal-agreement { 
+  font-size: 14px; font-family: "Times New Roman", serif;
+  background-color: #fff; color: #333; border:2px solid #ccc;
+  height: auto; max-height: 300px;  padding: 10px 5px; margin: 20px 0 4px; overflow: auto;
+}
+* html .legal-agreement { height: 300px; }
+.legal-agreement span { display: inline; color: inherit; font-size: inherit; margin: 0;}
+.legal-agreement-downloads { padding: 0; margin-bottom: 0px;}
+.legal-agreement-downloads a.pdf {
+  display:block; float: right; padding-left: 20px; margin-left: 20px;
+  background: transparent url(images/icons/pdf.png) 0 50% no-repeat; text-decoration: none;
+  height: 16px; line-height: 16px;
+}
+
+div.confirmation {
+  width: 704px; height: 34px; padding: 0 22px;
+  position: relative; bottom: -0px; left:-22px;
+  background: #555 url(images/confirmation-bg.gif) 0 0 repeat-x;
+}
+* html div.confirmation { padding: 0; left: 0;}
+div.confirmation a:focus, div.confirmation input:focus { outline: none;}
+
+/* Mini Panels like on the Login Screen */
+form.mini {position:relative;}
+form.mini div {padding:0;}
+form.mini div.checkbox {padding-left: 20px;}
+form.mini label {float:none; margin:0; display:block; width: 100%; font-size: 1.27em; line-height: 1.4em;}
+form.mini label span { display: inline; font-size: 0.86em;}
+form.mini input.text {
+  width: 444px; padding: 5px; font-size: 1.27em;
+  border: 1px solid #888; color: #424242;
+}
+form.mini div.required { margin-bottom: 1.5em;}
+form.mini div.checkbox {position:relative; top: -7px;}
+form.mini div.checkbox label { color: #999; font-size: 1em; line-height: 18px; font-weight: bold;}
+form.mini div.checkbox.required label { color: #000; }
+form.mini div.checkbox input { top: 1px;}
+form.mini div.confirmation { width: 456px; padding: 0 22px; left: -22px; }
+
+/*.threepxfix class below:
+Targets IE6- ONLY. Adds 3 pixel indent for multi-line form contents.
+to account for 3 pixel bug: http://www.positioniseverything.net/explorer/threepxtest.html
+*/
+
+* html .threepxfix {
+  margin-left: 3px;
+}
