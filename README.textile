@@ -1,15 +1,54 @@
 h1. Hubbub
 
-h4. Custom website framework centered around Meetup.com
+*Custom website framework centered around Meetup.com*
 
-*Features*
+h2. Features
 
-* Simple CMS
-* Meetup.com integration - view & rsvp for upcoming group meetups
-* Dedicated group blog(s) - for posting info about meetups or post talk or content relevant to the group
-* Aggregated Member Blog
-* Aggregated Twitter Feed
-* User profile pages (bio, meetups attended, Meetup.com groups)
-* Github integration - see groups cumulative github activity
+h4. Simple CMS
 
-*Possible Features*
+* simple content driven cms using textile/markdown
+* pages will be accessible via /pages/:permalink
+
+h4. Meetup.com Integration
+
+* view upcoming events
+* view group members
+* Users will authorize via OAuth so that they can RSVP
+
+h4. Group Blog
+
+* Members can publish articles
+* Group specific posts or presentation slides
+* Posts should allow comments
+* Comments should eventually be checked against akismet or similar
+
+h4. Aggregated Blog
+
+* Users will provide rss feeds of their blog
+* All blogs will be aggregated and show the user whose feed is associated
+* Aggregated blogs won't allow comments
+* latest blog posts will show up on users profile page
+* A delayed job will run periodically to fecth new posts
+
+h4. Twitter Integration
+
+* Members will provide twitter access via OAuth
+* Tweets will be aggregated for the members as a whole
+* Possibly aggregate twitter searches for certain hash tags ie. #cltrb
+* Latest tweets will show up on a users profile page
+* A delayed job will run periodically to fetch new tweets
+
+h4. Github integration
+
+* Show users commit activity - gives an idea how active our group is
+* Host dedicated group projects - maybe started during hack nights
+
+h4. User Profile pages
+
+* User profile pages that give move info on users
+* Tweets
+* Blog posts
+* Meetups attended
+* Github projects
+
+h2. Possible Features
