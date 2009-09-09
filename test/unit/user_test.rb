@@ -5,5 +5,6 @@ class UserTest < ActiveSupport::TestCase
     Factory(:user)
   end
   
+  should_be_authentic
   should_validate_presence_of :name
 end
