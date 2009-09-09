@@ -1,5 +1,5 @@
 class ActiveSupport::TestCase
-  def self.should_have_permalink(attribute, options = {})
+  def self.should_act_as_url(attribute, options = {})
     options[:column] ||= :url
     
     klass = self.name.gsub(/Test$/, '').constantize

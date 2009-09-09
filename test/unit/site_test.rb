@@ -6,5 +6,5 @@ class SiteTest < ActiveSupport::TestCase
   end
 
   should_validate_presence_of :name, :url, :meetup_group_id
-  should_have_permalink :name
+  should_act_as_url :name
 end
