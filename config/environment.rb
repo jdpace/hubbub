@@ -15,9 +15,16 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
+  config.gem "rsl-stringex", :version => ">= 0.9.2", :lib => "stringex", :source => "http://gems.github.com"
   config.gem "mislav-will_paginate", :lib => "will_paginate", :version => ">= 2.3.2", :source => "http://gems.github.com"
   config.gem "haml", :version => ">= 2.2.1"
   config.gem "binarylogic-authlogic", :lib => 'authlogic', :source => 'http://gems.github.com'
+  
+  # Test related gems
+  config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
+  config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
+  config.gem "mocha"
+  config.gem "chrisk-fakeweb", :lib => "fake_web", :source => "http://gems.github.com"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

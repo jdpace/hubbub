@@ -4,7 +4,14 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  filter_parameter_logging :password
+  
+  protected
+  
+    def current_site
+      # Oneday sites will be looked up by subdomain
+      # for now just get the one and only out
+      @current_site ||= Site.first
+    end
+  
 end
