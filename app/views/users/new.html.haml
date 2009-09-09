@@ -1,0 +1,20 @@
+%h1 Sign up
+
+- form_for @user do |f|
+  = f.error_messages
+  
+  .required
+    = f.label :name
+    = f.text_field :name
+  .required
+    = f.label :email
+    = f.text_field :email
+  .required
+    = f.label :password
+    = f.password_field :password
+  .required
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+    
+  %div
+    = f.submit 'Sign up'
