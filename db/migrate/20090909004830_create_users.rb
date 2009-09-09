@@ -21,6 +21,11 @@ class CreateUsers < ActiveRecord::Migration
       
       t.timestamps
     end
+    
+    add_index :users, :email
+    add_index :users, :persistence_token
+    add_index :users, :single_access_token
+    add_index :users, :perishable_token
   end
 
   def self.down

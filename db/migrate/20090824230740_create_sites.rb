@@ -8,6 +8,8 @@ class CreateSites < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :sites, :url
   end
 
   def self.down
