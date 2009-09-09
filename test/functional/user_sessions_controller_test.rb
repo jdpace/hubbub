@@ -31,23 +31,22 @@ class UserSessionsControllerTest < ActionController::TestCase
   context 'POST /user_session' do
     setup do
       @user = Factory(:user, :password => 'password', :password_confirmation => 'password')
+      activate_authlogic
+      logout
     end
     
     context 'when not logged in' do
       setup do
-        activate_authlogic
-        login_as nil
         post :create, :user_session => {:email => @user.email, :password => 'password', :password_confirmation => 'password'}
       end
       
-      should_change('the current user', :to => @user) { UserSession.find && UserSession.find.user }
+      should_change('the current user', :to => @user) { current_user }
       should_set_the_flash_to(/Login successful!/)
       should_redirect_to('the users account page') { account_url }
     end
     
     context 'when logged in' do
       setup do
-        activate_authlogic
         login_as @user
         post :create, :user_session => {:email => @user.email, :password => 'password', :password_confirmation => 'password'}
       end
@@ -69,7 +68,7 @@ class UserSessionsControllerTest < ActionController::TestCase
         delete :destroy
       end
       
-      should_change('the current user', :to => nil) { UserSession.find && UserSession.find.user }
+      should_change('the current user', :to => nil) { current_user }
       should_set_the_flash_to(/Logout successful!/)
       should_redirect_to('the login page') { login_url }
     end

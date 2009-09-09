@@ -46,4 +46,16 @@ class ActiveSupport::TestCase
     UserSession.create(user)
   end
   
+  def logout
+    current_user_session && current_user_session.destroy
+  end
+  
+  def current_user_session
+    UserSession.find
+  end
+  
+  def current_user
+    current_user_session && current_user_session.user
+  end
+  
 end
