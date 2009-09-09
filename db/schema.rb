@@ -9,7 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090909004830) do
+ActiveRecord::Schema.define(:version => 20090909190737) do
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.text     "body"
+    t.text     "body_html"
+    t.boolean  "published",  :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["url", "published"], :name => "index_pages_on_url_and_published"
+  add_index "pages", ["url"], :name => "index_pages_on_url"
 
   create_table "sites", :force => true do |t|
     t.string   "name"
