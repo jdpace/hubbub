@@ -1,0 +1,27 @@
+!!! Strict
+%html{ html_attrs("en_us") }
+  %head
+    %title 
+      Hubbub &mdash;
+      = yield(:page_title) || yield(:title) || "Admin"
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
+    
+    = render :partial => 'shared/head'
+    = yield :head
+  %body{:id => controller.controller_name, :class => controller.action_name}
+    #wrapper
+      #header
+        %a#site-name{:href => '/'} Hubbub
+      #nav-bar
+        = render :partial => 'shared/navigation'
+        
+      #content
+        %h1#content-title= yield :title
+        
+        = render :partial => 'shared/flash_messages', :locals => {:flash => flash}
+    
+        = yield
+        
+    #footer
+      Footer here
+    = yield :scripts
