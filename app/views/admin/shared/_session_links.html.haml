@@ -1,0 +1,6 @@
+- if logged_in?
+  #session-links
+    Logged in as
+    %strong= current_user.name
+    |
+    = link_to 'Logout', logout_path

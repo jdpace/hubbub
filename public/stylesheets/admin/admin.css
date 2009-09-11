@@ -1,0 +1,87 @@
+html { 
+  margin: 0; padding: 0;
+  color: #585858; background-color: #E2E2E2;
+  font-size: 62.8%; font-family: "Lucida Grande","Lucida Sans",Arial,sans-serif;
+}
+body { 
+  margin: 0 auto; padding: 0 5px; width: 900px; 
+  font-size: 1.3em; line-height: 1.4em;
+}
+
+/* Convenience Classes */
+.clear        { clear: both; }
+.clear-left   { clear: left; }
+.clear-right  { clear: right; }
+
+/* Headings */
+h1 { font-size: 2.0em; line-height: 1.2em; }
+h2 { font-size: 1.7em; line-height: 1.2em; }
+h3 { font-size: 1.5em; line-height: 1.2em; }
+h4 { font-size: 1.3em; line-height: 1.2em; }
+h5 { font-size: 1.1em; line-height: 1.2em; }
+h6 { font-size: 0.9em; line-height: 1.2em; }
+
+/* Links */
+a         { color: #BF3838; text-decoration: none;}
+a:visited { color: #674646;}
+a:hover   { color: #BF3838; text-decoration: underline; }
+
+/* Header */
+#header {
+  heigth: 90px;
+  position: relative;
+}
+#header #site-name {
+  font-size: 2.31em; font-weight: bold; line-height: 90px; text-decoration: none; text-transform: uppercase;
+  color: #585858;
+}
+#header #session-links {
+  position: absolute; top: 15px; right: 0;
+  font-size: 0.9em;
+}
+
+/* Navigation */
+#nav-bar {
+  margin-bottom: 20px;
+  background-color: #585858;
+}
+#nav-bar li { float: left; }
+#nav-bar li a {
+  display: block; padding: 20px 30px;
+  color: #fff;
+  font-size: 1.231em; font-weight: bold; line-height: 1em; text-decoration: none;
+}
+#nav-bar li a:hover { background-color: #686868; }
+#nav-bar li a.active { background-color: #BF3838;}
+
+/* Content Title */
+#content-title {
+  padding: 30px 20px; border: 1px solid #C6C6C6; border-bottom: none;
+  background-color: #FFF;
+}
+#content-title h1 {
+  font-size: 2em; line-height: 1em; font-weight: bold; font-style: italic; font-family: georgia, times, serif;
+}
+#content-title .meta { font-size: 0.9em; color: #787878; }
+
+/* Action Bar */
+#action-bar {
+  padding: 5px 20px; border: 1px solid #C6C6C6; border-top:none; border-bottom: none;
+  color: #E2E2E2; background-color: #585858;
+  text-align: right;
+}
+#action-bar a { color: #E2E2E2; text-decoration: none; }
+#action-bar a:hover { color: #FFF; text-decoration: underline;}
+
+/* Content */
+#content {
+  padding: 20px; border: 1px solid #C6C6C6;
+  background-color: #FFF;
+} 
+ 
+/* Footer */
+#footer {
+  padding: 20px 0;
+  font-size: 0.8em; text-align: center;
+  color: #929292;
+}

@@ -3,25 +3,26 @@
   %head
     %title 
       Hubbub &mdash;
-      = yield(:page_title) || yield(:title) || "Admin"
+      = yield(:page_title) || yield(:title) || "Admin Interface"
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
-    
-    = render :partial => 'shared/head'
+    = javascript_include_tag 'jquery/jquery', 'admin/admin.js'
+    = stylesheet_link_tag 'reset', 'admin/admin'
     = yield :head
   %body{:id => controller.controller_name, :class => controller.action_name}
-    #wrapper
-      #header
-        %a#site-name{:href => '/'} Hubbub
-      #nav-bar
-        = render :partial => 'shared/navigation'
-        
-      #content
-        %h1#content-title= yield :title
-        
-        = render :partial => 'shared/flash_messages', :locals => {:flash => flash}
-    
-        = yield
-        
+    #header
+      %a#site-name{:href => '/'} Hubbub Admin
+      = render :partial => 'admin/shared/session_links'
+    #nav-bar
+      = render :partial => 'admin/shared/navigation'
+    #content-title
+      %h1= yield :title
+      %span.meta= yield :meta
+    - if action_bar = yield(:action_bar)
+      #action-bar
+        = action_bar
+    #content      
+      = render :partial => 'admin/shared/flash_messages', :locals => {:flash => flash}
+      = yield
     #footer
-      Footer here
+      Powered by Hubbub
     = yield :scripts
