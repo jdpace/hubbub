@@ -10,7 +10,7 @@
     = yield :head
   %body{:id => controller.controller_name, :class => controller.action_name}
     #header
-      %a#site-name{:href => '/'} Hubbub Admin
+      = link_to 'Hubbub Admin', admin_root_path, :id => 'site-name'
       = render :partial => 'admin/shared/session_links'
     - if logged_in?
       #nav-bar
