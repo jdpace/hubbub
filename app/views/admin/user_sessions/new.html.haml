@@ -1,0 +1,17 @@
+- content_for :title, 'Login'
+- content_for :meta, "You'll need an admin account to access the good stuff"
+
+- form_for @user_session, :url => admin_user_session_path do |f|
+  = f.error_messages
+  
+  .required
+    = f.label :email
+    = f.text_field :email
+  .required
+    = f.label :password
+    = f.password_field :password
+  %div
+    = f.label :remember_me
+    = f.check_box :remember_me, :checked => true
+  %div
+    = f.submit 'Login'

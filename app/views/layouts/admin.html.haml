@@ -12,8 +12,9 @@
     #header
       %a#site-name{:href => '/'} Hubbub Admin
       = render :partial => 'admin/shared/session_links'
-    #nav-bar
-      = render :partial => 'admin/shared/navigation'
+    - if logged_in?
+      #nav-bar
+        = render :partial => 'admin/shared/navigation'
     #content-title
       %h1= yield :title
       %span.meta= yield :meta
@@ -24,5 +25,5 @@
       = render :partial => 'admin/shared/flash_messages', :locals => {:flash => flash}
       = yield
     #footer
-      Powered by Hubbub
+      Powered by Hubbub. This site looks its best when using a modern browser.
     = yield :scripts

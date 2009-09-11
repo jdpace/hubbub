@@ -35,7 +35,7 @@ module ShouldRequireAdminMacro
               eval "#{method.to_s} action, params"
             end
             should_set_the_flash_to(/not authorized/)
-            should_redirect_to("the login_path") { login_path }
+            should_redirect_to("the login_path") { admin_login_path }
           end
         end
       end
