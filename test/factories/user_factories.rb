@@ -6,3 +6,8 @@ Factory.define :user do |u|
   u.password              'password'
   u.password_confirmation 'password'
 end
+
+Factory.define :admin, :parent => :user do |a|
+  a.name                  'Administrator'
+  a.admin                 true
+end

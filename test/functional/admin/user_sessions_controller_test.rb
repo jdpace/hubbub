@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Admin::UserSessionsControllerTest < ActionController::TestCase
-  should_require_user :destroy
+  should_require_admin :destroy
   
   context 'GET admin/user_session/new' do
     context 'when not logged in' do
@@ -39,7 +39,7 @@ class Admin::UserSessionsControllerTest < ActionController::TestCase
   context 'When logged in' do
     setup do
       activate_authlogic
-      login_as(@user = Factory(:user))
+      login_as(@user = Factory(:admin))
     end
     
     context 'DELETE /user_session' do
