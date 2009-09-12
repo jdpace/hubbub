@@ -28,8 +28,8 @@ Rails::Initializer.run do |config|
   config.gem "chrisk-fakeweb", :lib => "fake_web", :source => "http://gems.github.com"
   
   # Deploy Related Gems
-  config.gem "vlad"
-  config.gem "vlad-git"
+  # config.gem "vlad"
+  # config.gem "vlad-git", :lib => false
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
