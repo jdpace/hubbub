@@ -12,8 +12,10 @@ ActionController::Routing::Routes.draw do |map|
     admin.resource :dashboard
     
     admin.resource :user_session
-    admin.login '/login',   :controller => 'user_sessions', :action => :new
+    admin.login     '/login',   :controller => 'user_sessions', :action => :new
     admin.logout    '/logout',  :controller => 'user_sessions', :action => :destroy
+    
+    admin.resources :pages
     
     admin.root :controller => 'dashboards', :action => 'show'
   end

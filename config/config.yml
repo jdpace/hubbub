@@ -1,3 +1,7 @@
 # Pagination limits
 per_page:
   users: 10
+  
+# Admin Pagination limits
+admin_per_page:
+  pages: 10

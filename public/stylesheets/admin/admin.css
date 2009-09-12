@@ -105,3 +105,10 @@ form input[type=submit] {
   font-size: 1.2em; line-height: 1em; text-transform: uppercase;
   border: none; color: #FFF; background-color: #387fc1;
 }
+
+/* Tables */
+table { width: 100%; border: 1px solid #C6C6C6;}
+table th, table td { border-bottom: 1px solid #C6C6C6; padding: 15px 12px; text-align: left; }
+table th { background-color: #E2E2E2; font-weight: bold; text-transform: uppercase; }
+table tbody tr:nth-child(odd) td { background-color: #F9F9F9; }
+table .main { width: 100%; }

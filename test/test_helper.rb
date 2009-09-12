@@ -43,6 +43,7 @@ class ActiveSupport::TestCase
   
   
   def login_as(user = nil)
+    activate_authlogic
     UserSession.create(user)
   end
   

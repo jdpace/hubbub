@@ -6,8 +6,7 @@ class UserSessionsControllerTest < ActionController::TestCase
   context 'GET /user_session/new' do
     context 'when not logged in' do
       setup do
-        activate_authlogic
-        login_as nil
+        logout
         get :new
       end
       
@@ -17,7 +16,6 @@ class UserSessionsControllerTest < ActionController::TestCase
     
     context 'when logged in' do
       setup do
-        activate_authlogic
         login_as Factory(:user)
         get :new
       end
@@ -31,7 +29,6 @@ class UserSessionsControllerTest < ActionController::TestCase
   context 'POST /user_session' do
     setup do
       @user = Factory(:user, :password => 'password', :password_confirmation => 'password')
-      activate_authlogic
       logout
     end
     
@@ -59,7 +56,6 @@ class UserSessionsControllerTest < ActionController::TestCase
   
   context 'When logged in' do
     setup do
-      activate_authlogic
       login_as(@user = Factory(:user))
     end
     
