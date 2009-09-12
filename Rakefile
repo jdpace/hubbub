@@ -12,5 +12,7 @@ require 'tasks/rails'
 begin
   require 'vlad'
   Vlad.load :scm => :git, :app => :passenger
+rescue LoadError
+  puts 'Vlad is not installed on this system. You will need to install vlad and vlad-git before deploying Hubbub.'
 end
 
