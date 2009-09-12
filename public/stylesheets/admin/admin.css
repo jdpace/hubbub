@@ -86,6 +86,15 @@ a:hover   { color: #BF3838; text-decoration: underline; }
   color: #929292;
 }
 
+/* Flash Messages */
+#flash-messages li {
+  padding: 13px 45px; margin-bottom:25px; border: 1px solid #C6C6C6;
+  background-color: #F9F9F9;
+  line-height: 1em;
+}
+#flash-messages .notice, #flash-messages .success { background: transparent url(images/icons/success.png) 16px 50% no-repeat; }
+#flash-messages .error                            { background: transparent url(images/icons/error.png)   16px 50% no-repeat; }
+
 /* Forms */
 form {
   width: 620px;
