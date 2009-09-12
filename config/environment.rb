@@ -26,6 +26,8 @@ Rails::Initializer.run do |config|
   config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
   config.gem "mocha"
   config.gem "chrisk-fakeweb", :lib => "fake_web", :source => "http://gems.github.com"
+  
+  # Deploy Related Gems
   config.gem "vlad"
   config.gem "vlad-git"
 
