@@ -11,13 +11,23 @@ class Admin::PagesControllerTest < ActionController::TestCase
     context 'GET /admin/pages' do
       setup do
         @pages = WillPaginate::Collection.new(1, App.admin_per_page[:pages], 3)
-        3.times { @pages << Factory.build(:page) }
+        3.times {|t| @pages << Factory.build(:page, :url => "page-#{t}") }
         Page.stubs(:paginate).returns(@pages)
         get :index
       end
       
       should_assign_to(:pages) { @pages }
-      should_respond_with :success
+    end
+    
+    
+    context 'GET /admin/pages/:id' do
+      setup do
+        @page = Factory.build(:page)
+        Page.stubs(:find_by_url!).with(@page.to_param).returns(@page)
+        get :show, :id => @page.to_param
+      end
+      
+      should_assign_to(:page) { @page }
     end
   end
   

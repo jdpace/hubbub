@@ -14,6 +14,7 @@ body {
 .clear-right  { clear: right; }
 
 /* Headings */
+h1, h2, h3, h4, h5, h6 { padding: 0.2em 0; margin-bottom: 1em; border-bottom: 1px solid #E2E2E2;}
 h1 { font-size: 2.0em; line-height: 1.2em; }
 h2 { font-size: 1.7em; line-height: 1.2em; }
 h3 { font-size: 1.5em; line-height: 1.2em; }
@@ -60,6 +61,7 @@ a:hover   { color: #BF3838; text-decoration: underline; }
   background-color: #FFF;
 }
 #content-title h1 {
+  padding: 0; margin: 0; border: none;
   font-size: 2em; line-height: 1em; font-weight: bold; font-style: italic; font-family: georgia, times, serif;
 }
 #content-title .meta { font-size: 0.9em; color: #787878; }
@@ -121,3 +123,12 @@ table th, table td { border-bottom: 1px solid #C6C6C6; padding: 15px 12px; text-
 table th { background-color: #E2E2E2; font-weight: bold; text-transform: uppercase; }
 table tbody tr:nth-child(odd) td { background-color: #F9F9F9; }
 table .main { width: 100%; }
+
+/* HTML Styling */
+.html { padding-left: 1em; border-left: 2px solid #C6C6C6;}
+.html h1, .html h2, .html h3, .html h4, .html h5, .html h6 {
+  border: none;
+}
+.html ul, .html ol  { margin-left: 2em; }
+.html ul li   { margin-bottom: 0.5em; list-style: disc; }
+.html ol li   { margin-bottom: 0.5em; list-style: decimal; }
