@@ -1,5 +1,5 @@
 class Admin::PagesController < Admin::AdminController
-  before_filter :find_page, :only => [:show, :edit, :update]
+  before_filter :find_page, :only => [:show, :edit, :update, :destroy]
   
   def index
     @pages = Page.paginate(:page => params[:page], :per_page => App.admin_per_page[:pages])
@@ -33,6 +33,12 @@ class Admin::PagesController < Admin::AdminController
     else
       render :edit
     end
+  end
+  
+  def destroy
+    @page.destroy
+    flash[:notice] = "Don't worry, that page was successfully destroyed."
+    redirect_to admin_pages_path
   end
   
   protected

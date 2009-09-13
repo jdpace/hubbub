@@ -45,7 +45,7 @@ class Admin::PagesControllerTest < ActionController::TestCase
     
     context 'GET /admin/pages/:id/edit' do
       setup do
-        @page = Factory.build(:page)
+        @page = Factory.build(:page, :url => 'page')
         Page.stubs(:find_by_url!).with(@page.to_param).returns(@page)
         get :edit, :id => @page.to_param
       end
@@ -109,6 +109,19 @@ class Admin::PagesControllerTest < ActionController::TestCase
         should_assign_to(:page) { @page }
         should_render_template :edit
       end
+    end
+    
+    
+    context 'DELETE /admin/pages/:id' do
+      setup do
+        @page = Factory.build(:page)
+        Page.expects(:find_by_url!).with(@page.to_param).returns(@page)
+        @page.expects(:destroy).returns(true)
+        delete :destroy
+      end
+      
+      should_set_the_flash_to(/successfully destroyed/)
+      should_redirect_to('the admin pages index') { admin_pages_path }
     end
     
   end # END logged in as an admin
