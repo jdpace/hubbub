@@ -1,0 +1,66 @@
+/* Temporary Style */
+/* Gets us by until we have a real theme */
+
+  html { 
+    margin: 0; padding: 0;
+    color: #585858; background-color: #FFF;
+    font-size: 62.8%; font-family: "Lucida Grande","Lucida Sans",Arial,sans-serif;
+  }
+  body { 
+    margin: 0 auto; padding: 0 5px; width: 900px; 
+    font-size: 1.3em; line-height: 1.4em;
+  }
+
+  /* Convenience Classes */
+  .clear        { clear: both; }
+  .clear-left   { clear: left; }
+  .clear-right  { clear: right; }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 { padding: 0.2em 0; margin-bottom: 1em; border-bottom: 1px solid #E2E2E2;}
+  h1 { font-size: 2.0em; line-height: 1.2em; }
+  h2 { font-size: 1.7em; line-height: 1.2em; }
+  h3 { font-size: 1.5em; line-height: 1.2em; }
+  h4 { font-size: 1.3em; line-height: 1.2em; }
+  h5 { font-size: 1.1em; line-height: 1.2em; }
+  h6 { font-size: 0.9em; line-height: 1.2em; }
+
+  /* General */
+  p { margin-bottom: 1em; }
+
+  /* Links */
+  a         { color: #BF3838; text-decoration: none;}
+  a:visited { color: #674646;}
+  a:hover   { color: #BF3838; text-decoration: underline; }
+
+  /* Header */
+  #header {
+    height: 60px; padding-top: 30px;
+    position: relative;
+    border-bottom: 2px solid #C6C6C6;
+  }
+  #header #site-name {
+    margin-top: 30px;
+    font-size: 2.31em; font-weight: bold; font-style: italic; text-decoration: none; font-family: georgia, times, serif;
+    color: #B60800;
+  }
+  #header #tag-line {
+    display: block;
+    font-size: 0.85em;
+    color: #787878;
+  }
+  
+  /* Content */
+  #content {
+    padding: 20px 0; margin-top: 2px;
+    border-top: 1px solid #C6C6C6;
+  } 
+
+  /* Footer */
+  #footer {
+    padding: 20px 0;
+    font-size: 0.8em; text-align: center;
+    color: #929292;
+  }
+
+/* END Temporary Style */

@@ -2,26 +2,27 @@
 %html{ html_attrs("en_us") }
   %head
     %title 
-      Hubbub &mdash;
+      cltrb &mdash;
       = yield(:page_title) || yield(:title) || "Meetup group sites"
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
     
     = render :partial => 'shared/head'
     = yield :head
   %body{:id => controller.controller_name, :class => controller.action_name}
-    #wrapper
-      #header
-        %a#site-name{:href => '/'} Hubbub
-      #nav-bar
-        = render :partial => 'shared/navigation'
-        
-      #content
-        %h1#content-title= yield :title
-        
-        = render :partial => 'shared/flash_messages', :locals => {:flash => flash}
-    
-        = yield
+    #header
+      %a#site-name{:href => '/'} cltrb
+      %span#tag-line the Charlotte Ruby Users Group
+    #nav-bar
+      = render :partial => 'shared/navigation'
+      
+    #content
+      - if content_title = yield(:title)
+        %h1#content-title= content_title
+      
+      = render :partial => 'shared/flash_messages', :locals => {:flash => flash}
+  
+      = yield
         
     #footer
-      Footer here
+      Powered by Hubbub. Built by the Charlotte Ruby Users Group.
     = yield :scripts

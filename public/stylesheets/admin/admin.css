@@ -32,7 +32,7 @@ a:hover   { color: #BF3838; text-decoration: underline; }
 
 /* Header */
 #header {
-  heigth: 90px;
+  height: 90px;
   position: relative;
 }
 #header #site-name {
