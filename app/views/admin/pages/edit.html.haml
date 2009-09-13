@@ -1,0 +1,8 @@
+- content_for :title, 'Edit Page'
+
+- form_for @page, :url => admin_page_path(@page) do |f|
+  
+  = render :partial => 'fields', :locals => {:f => f}
+  
+  %div
+    = f.submit 'Update Page'

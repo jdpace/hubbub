@@ -1,0 +1,9 @@
+- content_for :title, 'Create a New Page'
+
+- form_for @page, :url => admin_pages_path do |f|
+
+  = render :partial => 'fields', :locals => {:f => f}
+  
+  %div
+    = f.submit 'Add Page'
+    

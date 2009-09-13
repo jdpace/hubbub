@@ -22,6 +22,9 @@ h4 { font-size: 1.3em; line-height: 1.2em; }
 h5 { font-size: 1.1em; line-height: 1.2em; }
 h6 { font-size: 0.9em; line-height: 1.2em; }
 
+/* General */
+p { margin-bottom: 1em; }
+
 /* Links */
 a         { color: #BF3838; text-decoration: none;}
 a:visited { color: #674646;}
@@ -101,20 +104,30 @@ a:hover   { color: #BF3838; text-decoration: underline; }
 form {
   width: 620px;
 }
-form > div { padding-bottom: 1em;}
+form > div { margin: 1em 0;}
 form label {
   font-weight: bold; text-transform: uppercase; line-height: 1.6em;
   display: block; 
 }
 form input[type=text], form input[type=password] {
   width: 100%; padding: 0.8em;
-  font-size: inherit;
+  font-size: 1em;
+  color: #787878; border: 1px solid #C6C6C6;
+}
+form textarea {
+  width: 100%; padding: 0.8em;
+  font-size: inherit; font-family: inherit;
   color: #787878; border: 1px solid #C6C6C6;
 }
 form input[type=submit] {
   display:block; width: auto; padding: 0.5em;
   font-size: 1.2em; line-height: 1em; text-transform: uppercase;
   border: none; color: #FFF; background-color: #387fc1;
+}
+form > div > span {
+  display: block; margin-top: 0.5em;
+  font-size: 0.85em;
+  color: #787878;
 }
 
 /* Tables */
@@ -129,6 +142,6 @@ table .main { width: 100%; }
 .html h1, .html h2, .html h3, .html h4, .html h5, .html h6 {
   border: none;
 }
-.html ul, .html ol  { margin-left: 2em; }
+.html ul, .html ol  { margin-left: 2em; margin-bottom: 1em; }
 .html ul li   { margin-bottom: 0.5em; list-style: disc; }
 .html ol li   { margin-bottom: 0.5em; list-style: decimal; }

@@ -1,0 +1,31 @@
+= f.error_messages
+= required_field_legend
+
+.required
+  = f.label :title
+  = f.text_field :title
+  - unless f.object.url
+    %span 
+      Choose carefully. The title will be used to generate the page's permalink.
+      So, 'My New Page' will be accessible via /pages/my-new-page.
+
+- if f.object.url
+  .required
+    = f.label :url
+    = f.text_field :url
+    %span
+      The url is what shows up in the address bar. For example, a page with a url of 'my-page'
+      will be accessible from /pages/my-page. It is auto-generated from the page title on creation.
+      Be careful not to change any published urls.
+    
+.required
+  = f.label :body
+  = f.text_area :body
+  %span 
+    Feel free to use HTML or 
+    = link_to 'Markdown', 'http://en.wikipedia.org/wiki/Markdown' 
+    to format your page.
+    
+%div
+  = f.label :published
+  = f.check_box :published
