@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -20,13 +20,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "binarylogic-authlogic", :lib => 'authlogic', :source => 'http://gems.github.com'
   config.gem "bluecloth"
-  
-  # Test related gems
-  config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
-  config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
-  config.gem "mocha"
-  config.gem "chrisk-fakeweb", :lib => "fake_web", :source => "http://gems.github.com"
-  
+
   # Deploy Related Gems
   # config.gem "vlad"
   # config.gem "vlad-git", :lib => false
