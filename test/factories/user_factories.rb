@@ -11,3 +11,8 @@ Factory.define :admin, :parent => :user do |a|
   a.name                  'Administrator'
   a.admin                 true
 end
+
+Factory.define :author, :parent => :user do |a|
+  a.name                  'Author'
+  a.author                true
+end
