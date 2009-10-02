@@ -45,6 +45,13 @@
 # }
 # 
 OAUTH_CREDENTIALS={
+  :meetup => {
+    :key => "623DFB0291048739434FCB38822B79C8",
+    :secret => "873DB54E1C3050830A3605E66AABEBDB", 
+    :options => {
+      :site=>"http://www.meetup.com/oauth/request/"
+    }
+  }
 } unless defined? OAUTH_CREDENTIALS
 
 load 'oauth/models/consumers/service_loader.rb'
