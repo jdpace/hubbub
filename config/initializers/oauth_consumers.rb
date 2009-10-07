@@ -51,6 +51,10 @@ OAUTH_CREDENTIALS={
     :options => {
       :site=>"http://www.meetup.com/oauth/request/"
     }
+  },
+  :twitter=>{
+    :key    => "ggUVgtxsNrRdbBoW87xXtg",
+    :secret => "WcI1CxjClbuIfZVFRMdREdx5EFeED7QaRF0DO0gHII"
   }
 } unless defined? OAUTH_CREDENTIALS
 

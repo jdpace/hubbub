@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "bluecloth"
   config.gem "oauth", :source => 'http://gems.github.com' #:version => "0.3.6"
   config.gem "oauth-plugin", :source => 'http://gems.github.com' #:version => "0.3.12"
+  config.gem 'twitter'
 
   # Deploy Related Gems
   # config.gem "vlad"
