@@ -2,6 +2,7 @@
 config/database.yml
 tmp/*
 db/*.sqlite3
+db/schema.rb
 log/*
 vendor/rails
 public/javascripts/site.js
