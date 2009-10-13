@@ -28,7 +28,7 @@ config.action_mailer.delivery_method = :test
 # config.active_record.schema_format = :sql
 
 # Test related gems
-config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
-config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
+config.gem "shoulda", :source => "http://gemcutter.org"
+config.gem "factory_girl", :source => "http://gemcutter.org"
 config.gem "mocha"
-config.gem "chrisk-fakeweb", :lib => "fake_web", :source => "http://gems.github.com"
+config.gem "fakeweb"
