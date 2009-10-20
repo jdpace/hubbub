@@ -1,4 +1,4 @@
-class BlogPost < ActiveRecord::Base
+class Post < ActiveRecord::Base
   
   acts_as_url :title
   

@@ -1,2 +1,2 @@
-class BlogPostsController < ApplicationController
+class PostsController < ApplicationController
 end
