@@ -11,6 +11,12 @@
     font-size: 1.3em; line-height: 1.4em;
   }
 
+  /* .html areas */
+  /* Used for user generated css */
+  .html ul, .html ol  { margin-bottom: 1em; padding-left: 2em;}
+  .html ul li         { list-style: disc; margin-bottom: 0.3em; }
+  .html ol li         { list-style: decimal; margin-bottom: 0.3em; }
+
   /* Convenience Classes */
   .clear        { clear: both; }
   .clear-left   { clear: left; }
