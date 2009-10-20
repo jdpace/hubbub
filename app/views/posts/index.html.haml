@@ -1,3 +1,3 @@
 - @posts.each do |post|
-  %h3= post.title
+  %h3= link_to post.title, post_path(post)
   .html= post.body_html

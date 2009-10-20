@@ -17,7 +17,7 @@ class PostsControllerTest < ActionController::TestCase
   context "Get /posts/:id" do
     setup do
       @post = Factory.build(:post, :url => 'post', :created_at => 1.day.ago)
-      Post.stubs(:find).with(@post.to_param).returns(@post)
+      Post.stubs(:find_by_url!).with(@post.to_param).returns(@post)
       get :show, :id => @post.to_param
     end
     
