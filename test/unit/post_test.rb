@@ -7,6 +7,7 @@ class PostTest < ActiveSupport::TestCase
   should_act_as_url :title
   
   should_belong_to :user
+  should_have_many :comments
   
   context 'A Blog Post' do
     setup do

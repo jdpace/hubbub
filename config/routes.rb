@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
+  map.resources :posts do |post|
+    post.resources :comments, :only => :create
+  end
 
   map.resources :oauth_consumers,:member=>{:callback=>:get}
 
@@ -26,7 +28,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => 'dashboards', :action => 'show'
   end
   
-  map.root    :controller => 'dashboards', :action => 'show'
+  map.root    :controller => 'posts', :action => 'index'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

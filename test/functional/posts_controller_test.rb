@@ -6,7 +6,7 @@ class PostsControllerTest < ActionController::TestCase
     setup do
       @posts = []
       3.times {|t| @posts << Factory.build(:post, :url => "post-#{t}")}
-      Post.stubs(:paginate).returns(@posts)
+      Post.stubs(:ordered).returns(@posts).stubs(:paginate).returns(@posts)
       get :index
     end
     
