@@ -1,3 +1,2 @@
-- @posts.each do |post|
-  %h3= link_to post.title, post_path(post)
-  .html= post.body_html
+= render :partial => 'post', :collection => @posts, :locals => {:index => true}
+= will_paginate @posts

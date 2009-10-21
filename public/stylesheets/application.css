@@ -72,11 +72,15 @@
 /* END Temporary Style */
 
 /* Posts */
-.post h1    { margin-bottom: 0.3em; }
-.post .meta { font-size: 1.4em; line-height: 1.2em; margin-bottom: 2em; padding-left: 0.5em; border-left: 3px solid #C6C6C6; }
+.post .post-title  { margin-bottom: 0.3em; }
+.post .post-title a { color: inherit; text-decoration: none; }
+.post .post-title a:hover { color: #B60600; }
+.post .meta { font-size: 1.3em; line-height: 1.2em; margin-bottom: 2em; padding-left: 0.5em; border-left: 3px solid #C6C6C6; }
 .post .meta .author {
   color: #B60600;
 }
+.post .meta .comments { background-color: #C6C6C6; color: #FFF; display: inline-block; padding: 0.2em 0.3em; text-decoration: none;}
+.post .meta .comments:hover { background-color: #A2A2A2; }
 .post .html { margin-bottom: 2em; }
 .meta .date { color: #999; }
 

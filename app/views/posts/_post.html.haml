@@ -1,0 +1,12 @@
+.post
+  - if index
+    %h3.post-title= link_to h(post.title), post_path(post)
+  - else
+    %h1.post-title= post.title
+  .meta
+    %span.author= post.user.name
+    %abbr.date{:title => post.created_at.to_s(:full_ordinal)}=   post.created_at.to_s(:micro)
+    - if index
+      = link_to pluralize(post.comments.count, 'comment'), post_path(post, :anchor => 'comments'), :class => 'comments'
+
+  .html= post.body_html

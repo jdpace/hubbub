@@ -1,10 +1,4 @@
-.post
-  %h1= @post.title
-  .meta
-    %span.author= @post.user.name
-    %abbr.date{:title => @post.created_at.to_s(:full_ordinal)}=   @post.created_at.to_s(:micro)
-
-  .html= @post.body_html
+= render :partial => 'post', :locals => {:post => @post, :index => false}
 
 %h4#comments= "#{pluralize(@post.comments.count, 'Comment')} so far"
 
