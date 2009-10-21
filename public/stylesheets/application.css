@@ -70,3 +70,17 @@
   }
 
 /* END Temporary Style */
+
+/* Posts */
+.post h1    { margin-bottom: 0.3em; }
+.post .meta { font-size: 1.4em; line-height: 1.2em; margin-bottom: 2em; padding-left: 0.5em; border-left: 3px solid #C6C6C6; }
+.post .meta .author {
+  color: #B60600;
+}
+.post .html { margin-bottom: 2em; }
+.meta .date { color: #999; }
+
+.comment { padding-left: 0.5em; border-left: 3px solid #C6C6C6; }
+.comment.member { border-color: #B60600; }
+.comment .meta { margin: 0; border: none; font-size: 1em; }
+.comment .meta .author, .comment .meta .author a { color: #B60600; }
