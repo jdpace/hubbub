@@ -1,0 +1,8 @@
+- content_for :title, 'Edit Post'
+
+- form_for @post, :url => admin_post_path(@post) do |f|
+
+  = render :partial => 'fields', :locals => {:f => f}
+  
+  %div
+    = f.submit 'Update Post'

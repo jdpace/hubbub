@@ -4,7 +4,7 @@ class PostsControllerTest < ActionController::TestCase
   
   context "GET /posts" do
     setup do
-      @posts = []
+      @posts = WillPaginate::Collection.new(1, App.per_page[:posts], 3)
       3.times {|t| @posts << Factory.build(:post, :url => "post-#{t}", :created_at => 1.day.ago)}
       Post.stubs(:ordered).returns(@posts).stubs(:paginate).returns(@posts)
       get :index

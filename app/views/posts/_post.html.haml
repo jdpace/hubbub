@@ -9,4 +9,5 @@
     - if index
       = link_to pluralize(post.comments.count, 'comment'), post_path(post, :anchor => 'comments'), :class => 'comments'
 
-  .html= post.body_html
+  .html
+    = index && !post.excerpt.blank? ? post.excerpt_html : post.body_html

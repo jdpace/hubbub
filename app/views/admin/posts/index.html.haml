@@ -1,0 +1,19 @@
+- content_for :title, 'Posts'
+- content_for :meta, 'a community blog'
+- content_for :action_bar, link_to('create a new post', new_admin_post_path)
+
+%table
+  %thead
+    %tr
+      %th.main Title
+      %th      Comments
+      %th      Created
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= link_to h(post.title), admin_post_path(post)
+        %td= post.comments.count
+        %td.nowrap
+          %abbr{:title => post.created_at.to_s(:full_ordinal)}= post.created_at.to_s(:micro)
+      
+= will_paginate @pages

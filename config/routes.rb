@@ -24,6 +24,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.logout    '/logout',  :controller => 'user_sessions', :action => :destroy
     
     admin.resources :pages
+    admin.resources :posts
     
     admin.root :controller => 'dashboards', :action => 'show'
   end

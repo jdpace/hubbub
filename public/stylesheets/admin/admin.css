@@ -12,6 +12,7 @@ body {
 .clear        { clear: both; }
 .clear-left   { clear: left; }
 .clear-right  { clear: right; }
+.nowrap       { white-space: nowrap; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 { padding: 0.2em 0; margin-bottom: 1em; border-bottom: 1px solid #E2E2E2;}
@@ -119,6 +120,7 @@ form textarea {
   font-size: inherit; font-family: inherit;
   color: #787878; border: 1px solid #C6C6C6;
 }
+form textarea.short { height: 8em; }
 form input[type=submit] {
   display:block; width: auto; padding: 0.5em;
   font-size: 1.2em; line-height: 1em; text-transform: uppercase;

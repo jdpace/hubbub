@@ -1,0 +1,8 @@
+- content_for :title, 'Create a New Post'
+
+- form_for @post, :url => admin_posts_path do |f|
+
+  = render :partial => 'fields', :locals => {:f => f}
+  
+  %div
+    = f.submit 'Publish Post'

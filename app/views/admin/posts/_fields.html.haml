@@ -1,0 +1,21 @@
+= f.error_messages
+= required_field_legend
+
+.required
+  = f.label :title
+  = f.text_field :title
+  
+%div
+  = f.label :excerpt
+  = f.text_area :excerpt, :class => 'short'
+  %span 
+    The excerpt will be used in place of the full body when there
+    are multiple post shown on a page.
+    
+.required
+  = f.label :body
+  = f.text_area :body
+  %span 
+    Feel free to use HTML or 
+    = link_to 'Markdown', 'http://en.wikipedia.org/wiki/Markdown' 
+    to format your post.

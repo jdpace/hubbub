@@ -6,3 +6,4 @@ per_page:
 # Admin Pagination limits
 admin_per_page:
   pages: 10
+  posts: 10

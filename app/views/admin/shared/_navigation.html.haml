@@ -2,7 +2,7 @@
   #nav-bar
     %ul
       %li= link_to 'Dashboard', admin_dashboard_path, :class => active_if_here(:dashboards)
-      %li= link_to 'Blog',      '#'
+      %li= link_to 'Posts',     admin_posts_path,     :class => active_if_here(:posts)
       %li= link_to 'Pages',     admin_pages_path,     :class => active_if_here(:pages)
       %li= link_to 'Users',     '#',                  :class => active_if_here(:users)
     %div.clear

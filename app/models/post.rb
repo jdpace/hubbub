@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :body, :user
   validate_on_create :validate_user_is_author
   
-  before_save :cache_body_html
+  before_save :cache_html
   
   named_scope :ordered, :order => 'id DESC'
   
@@ -18,9 +18,14 @@ class Post < ActiveRecord::Base
   
   protected
   
-    def cache_body_html
+    def cache_html
       blue_cloth = BlueCloth::new(body)
       self.body_html = blue_cloth.to_html
+      
+      unless excerpt.blank?
+        blue_cloth = BlueCloth::new(excerpt)
+        self.excerpt_html = blue_cloth.to_html
+      end
     end
   
     def validate_user_is_author
