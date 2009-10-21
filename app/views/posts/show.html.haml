@@ -1,4 +1,4 @@
-= render :partial => 'post', :locals => {:post => @post, :index => false}
+= render :partial => 'posts/post', :locals => {:post => @post, :index => false}
 
 %h4#comments= "#{pluralize(@post.comments.count, 'Comment')} so far"
 
