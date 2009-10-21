@@ -7,7 +7,7 @@
     font-size: 62.8%; font-family: "Lucida Grande","Lucida Sans",Arial,sans-serif;
   }
   body { 
-    margin: 0 auto; padding: 0 5px; width: 900px; 
+    margin: 0 auto; padding: 0 5px; width: 760px; 
     font-size: 1.3em; line-height: 1.4em;
   }
 
@@ -35,7 +35,7 @@
   p { margin-bottom: 1em; }
 
   /* Links */
-  a         { color: #BF3838; text-decoration: none;}
+  a:link    { color: #BF3838; text-decoration: none;}
   a:visited { color: #674646;}
   a:hover   { color: #BF3838; text-decoration: underline; }
 

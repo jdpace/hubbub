@@ -3,9 +3,11 @@ ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!({
   :date_ordinal => lambda { |date| date.strftime("%A, %B #{date.day.ordinalize}")},
   :date_short   => lambda { |date| date.strftime("%b #{date.day.ordinalize}")},
   :full_ordinal => lambda { |time| time.strftime("%A, %B #{time.day.ordinalize}, %Y at %I:%M%p") },
-  :calendar     => "%Y-%m-%d"
+  :calendar     => "%Y-%m-%d",
+  :micro        => "%d %b %y"
 })
 ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!({
   :date_ordinal => lambda { |date| date.strftime("%A, %B #{date.day.ordinalize} %Y")},
-  :date_short   => lambda { |date| date.strftime("%b #{date.day.ordinalize}")}
+  :date_short   => lambda { |date| date.strftime("%b #{date.day.ordinalize}")},
+  :micro        => "%d %b %y"
 })

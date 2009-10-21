@@ -1,0 +1,22 @@
+- form_for @comment, :url => post_comments_path(post,:anchor => dom_id(@comment)) do |f|
+  %fieldset
+    %legend Post a comment
+    
+    = f.error_messages
+    
+    - unless logged_in?
+      .required
+        = f.label :author_name, 'Name'
+        = f.text_field :author_name
+      .required
+        = f.label :author_email, 'Email'
+        = f.text_field :author_email
+      %div
+        = f.label :author_website, 'URL'
+        = f.text_field :author_website
+    .required
+      = f.label :body, 'Comments'
+      = f.text_area :body, :class => 'full short'
+    
+    %div
+      = f.submit 'Post comment'

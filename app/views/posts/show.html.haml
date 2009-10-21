@@ -1,6 +1,13 @@
 %h1= @post.title
 .meta
   %span.author= @post.user.name
-  %span.when=   @post.created_at.to_date.to_s(:long_ordinal)
+  %span.date=   @post.created_at.to_s(:micro)
 
 .html= @post.body
+
+%h3#comments= "#{pluralize(@post.comments.count, 'Comment')} so far"
+
+%ol#comments
+  = render @post.comments
+
+= render :partial => 'comments/form', :locals => {:post => @post}

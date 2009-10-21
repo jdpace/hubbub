@@ -22,6 +22,7 @@ class PostsControllerTest < ActionController::TestCase
     end
     
     should_assign_to(:post) { @post }
+    should_assign_to(:comment)
   end
   
 end

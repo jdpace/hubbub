@@ -1,0 +1,6 @@
+%li.comment{:id => dom_id(comment)}
+  %h5.meta
+    %span.author= comment.author_website.blank? ? comment.author_name : link_to(comment.author_name, comment.author_website, :rel => 'nofollow', :target => '_blank')
+    %span.date=   comment.created_at.to_s(:micro)
+  
+  = simple_format comment.body

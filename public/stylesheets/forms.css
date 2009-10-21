@@ -12,9 +12,9 @@ form span.required {
 
 fieldset {
   display: block;
-  background-color: #F6FFDF;
-  border-top: 2px solid #B0BC66;
-  border-bottom: 2px solid #B0BC66;
+  background-color: #F0F0F0;
+  border-top: 2px dashed #C6C6C6;
+  border-bottom: 2px dashed #C6C6C6;
   padding: 20px 8px;
   margin-bottom: 2em;
 }
