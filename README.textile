@@ -51,4 +51,10 @@ h4. User Profile pages
 * Meetups attended
 * Github projects
 
+h4. Job Board (via Jim Van Fleet)
+
+* Local companies could place job ads for a small fee possibly
+* Job hunters could fill out form with info and attached resume ???
+* Proceeds would go to group events
+
 h2. Possible Features
