@@ -64,9 +64,22 @@
 
   /* Footer */
   #footer {
-    padding: 20px 0;
+    padding: 20px 90px 20px 0;
     font-size: 0.8em; text-align: center;
     color: #929292;
+  }
+  #footer:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+  }
+  #footer #sponsors {
+    width: 50px; padding-left: 40px;
+    float: right; margin-right: -90px;
+    border-left: 1px solid #C6C6C6;
+    background: transparent url(/images/sponsors/label.png) 4px 0 no-repeat;
   }
 
 /* END Temporary Style */
