@@ -4,3 +4,13 @@
   %li
     %strong Email:
     = @user.email
+
+- if @user.twitter
+  %h2 Following on Twitter:
+  - @user.twitter.client.friends.each do |friend|
+    = link_to_twitter_image(friend)
+  %br
+  %small= unlink_twitter
+- else
+  %p 
+    =  link_twitter

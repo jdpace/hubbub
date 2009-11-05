@@ -6,7 +6,7 @@ class OauthConsumersController < ApplicationController
     @consumer_tokens=ConsumerToken.all :conditions=>{:user_id=>current_user.id}
     @services=OAUTH_CREDENTIALS.keys-@consumer_tokens.collect{|c| c.class.service_name}
   end
-  
+
   protected
   
   # Change this to decide where you want to redirect user to after callback is finished.
