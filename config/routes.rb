@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     post.resources :comments, :only => :create
   end
 
-  map.resources :oauth_consumers,:member=>{:callback=>:get}
+  map.resources :oauth_consumers, :member => {:callback=>:get}
 
   map.resources :pages
 

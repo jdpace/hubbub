@@ -30,6 +30,11 @@ class ApplicationController < ActionController::Base
       current_user
     end
     
+    # Add login_required to be used by Oauth gem
+    def login_required
+      require_user
+    end
+    
     def require_user
       unless current_user
         store_location
