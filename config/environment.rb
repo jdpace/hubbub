@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "oauth-plugin"
   config.gem 'twitter'
   config.gem 'feedzirra'
+  config.gem 'whenever', :lib => false
 
   # Deploy Related Gems
   # config.gem "vlad"
