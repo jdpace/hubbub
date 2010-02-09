@@ -3,7 +3,7 @@
   %head
     %title 
       cltrb &mdash;
-      = yield(:page_title) || yield(:title) || "Meetup group sites"
+      = yield(:page_title) || yield(:title) || "Charlotte Ruby Users Group"
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/
     
     = render :partial => 'shared/head'
@@ -11,7 +11,7 @@
   %body{:id => controller.controller_name, :class => controller.action_name}
     #header
       %a#site-name{:href => '/'} cltrb
-      %span#tag-line the Charlotte Ruby Users Group
+      %span#tag-line Charlotte Ruby Users Group
     #nav-bar
       = render :partial => 'shared/navigation'
       
@@ -22,9 +22,11 @@
       = render :partial => 'shared/flash_messages', :locals => {:flash => flash}
   
       = yield
+      
+    #sidebar
+      %h4#sponsors Sponsors
+      = link_to image_tag('sponsors/engineyard.png'), 'http://www.engineyard.com', :target => '_blank'
         
     #footer
-      #sponsors 
-        = link_to image_tag('sponsors/engineyard.png'), 'http://www.engineyard.com', :target => '_blank'
       %p Powered by Hubbub. Built by the Charlotte Ruby Users Group.
     = yield :scripts

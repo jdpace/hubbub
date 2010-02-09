@@ -1,0 +1,8 @@
+%ul
+  %li{:class => active_if_here(:dashboards)}
+    = link_to 'Home', root_path, :class => 'home'
+  %li{:class => active_if_here(:posts)}
+    = link_to 'Blog', posts_path, :class => 'blog'
+  %li{:class => (on_page?(:about) ? 'active' : nil)}
+    = link_to 'About', page_path('about'), :class => 'about'
+  %li.last
