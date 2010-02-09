@@ -15,13 +15,13 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem "rsl-stringex", :lib => "stringex", :source => "http://gems.github.com"
-  config.gem "mislav-will_paginate", :lib => "will_paginate", :source => "http://gems.github.com"
+  config.gem "stringex"
+  config.gem "will_paginate"
   config.gem "haml"
-  config.gem "binarylogic-authlogic", :lib => 'authlogic', :source => 'http://gems.github.com'
+  config.gem "authlogic"
   config.gem "bluecloth"
-  config.gem "oauth", :source => 'http://gems.github.com' #:version => "0.3.6"
-  config.gem "oauth-plugin", :source => 'http://gems.github.com' #:version => "0.3.12"
+  config.gem "oauth"
+  config.gem "oauth-plugin"
   config.gem 'twitter'
 
   # Deploy Related Gems
