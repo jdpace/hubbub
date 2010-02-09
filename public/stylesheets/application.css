@@ -24,7 +24,7 @@
 
   /* Headings */
   h1, h2, h3, h4, h5, h6 {
-    padding: 0.2em 0; margin-bottom: 1em; 
+    padding: 0.2em 0; margin-bottom: 0.6em; 
     font-family: "adelle-1", "adelle-2", serif;
     border-bottom: 1px solid #E2E2E2;
   }

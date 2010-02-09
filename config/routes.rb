@@ -29,7 +29,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.root :controller => 'dashboards', :action => 'show'
   end
   
-  map.root    :controller => 'posts', :action => 'index'
+  map.root    :controller => 'dashboards', :action => 'show'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

@@ -11,6 +11,9 @@ class Post < ActiveRecord::Base
   before_save :cache_html
   
   named_scope :ordered, :order => 'id DESC'
+  named_scope :limit, lambda {|max|
+    { :limit => max }
+  }
   
   def to_param
     url

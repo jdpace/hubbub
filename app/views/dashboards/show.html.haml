@@ -1,3 +1,7 @@
 - content_for :title, 'Welcome Local Rubyists'
 
 .html= @home_page.body_html if @home_page
+
+= render :partial => 'posts/post', :collection => @posts, :locals => {:index => true}
+
+= link_to 'more posts &raquo;', posts_path
