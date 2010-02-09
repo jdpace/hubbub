@@ -1,0 +1,144 @@
+--- !ruby/object:Gem::Specification 
+name: feedzirra
+version: !ruby/object:Gem::Version 
+  version: 0.0.20
+platform: ruby
+authors: 
+- Paul Dix
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-02-19 00:00:00 -05:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: nokogiri
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">"
+      - !ruby/object:Gem::Version 
+        version: 0.0.0
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: sax-machine
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 0.0.12
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: curb
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 0.2.3
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: builder
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 2.1.2
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: activesupport
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 2.0.0
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: loofah
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 0.3.1
+    version: 
+description: 
+email: paul@pauldix.net
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/core_ext/date.rb
+- lib/core_ext/string.rb
+- lib/feedzirra.rb
+- lib/feedzirra/feed.rb
+- lib/feedzirra/parser/atom.rb
+- lib/feedzirra/parser/atom_entry.rb
+- lib/feedzirra/parser/atom_feed_burner.rb
+- lib/feedzirra/parser/atom_feed_burner_entry.rb
+- lib/feedzirra/parser/itunes_rss.rb
+- lib/feedzirra/parser/itunes_rss_item.rb
+- lib/feedzirra/parser/itunes_rss_owner.rb
+- lib/feedzirra/parser/rss.rb
+- lib/feedzirra/parser/rss_entry.rb
+- lib/feedzirra/feed_utilities.rb
+- lib/feedzirra/feed_entry_utilities.rb
+- README.textile
+- Rakefile
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/feedzirra/feed_spec.rb
+- spec/feedzirra/parser/atom_spec.rb
+- spec/feedzirra/parser/atom_entry_spec.rb
+- spec/feedzirra/parser/atom_feed_burner_spec.rb
+- spec/feedzirra/parser/atom_feed_burner_entry_spec.rb
+- spec/feedzirra/parser/itunes_rss_spec.rb
+- spec/feedzirra/parser/itunes_rss_item_spec.rb
+- spec/feedzirra/parser/itunes_rss_owner_spec.rb
+- spec/feedzirra/parser/rss_spec.rb
+- spec/feedzirra/parser/rss_entry_spec.rb
+- spec/feedzirra/feed_utilities_spec.rb
+- spec/feedzirra/feed_entry_utilities_spec.rb
+has_rdoc: true
+homepage: http://github.com/pauldix/feedzirra
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.5
+signing_key: 
+specification_version: 2
+summary: "A feed fetching and parsing library that treats the internet like Godzilla treats Japan: it dominates and eats all."
+test_files: []
+

@@ -4,7 +4,7 @@ class CommentsControllerTest < ActionController::TestCase
   
   context 'POST /posts/:post_id/comments' do
     setup do
-      @post = Factory.build(:post, :url => 'post', :created_at => 1.day.ago)
+      @post = Factory.build(:post, :url => 'post', :published_at => 1.day.ago)
       Post.stubs(:find_by_url!).with(@post.url).returns(@post)
       @comment = Factory.build(:comment, :id => 9999)
       @post.comments.stubs(:new).returns(@comment)

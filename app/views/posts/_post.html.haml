@@ -1,13 +1,17 @@
 .post
   - if index
-    %h3.post-title= link_to h(post.title), post_path(post)
+    %h3.post-title= link_to_post post
   - else
     %h1.post-title= post.title
   .meta
-    %span.author= post.user.name
-    %abbr.date{:title => post.created_at.to_s(:full_ordinal)}=   post.created_at.to_s(:micro)
-    - if index
+    %span.author= post.author_name
+    - if post.feed
+      %span.feed
+        via
+        %strong= post.feed.title
+    %abbr.date{:title => post.published_at.to_s(:full_ordinal)}=   post.published_at.to_s(:micro)
+    - if index && !post.feed
       = link_to pluralize(post.comments.count, 'comment'), post_path(post, :anchor => 'comments'), :class => 'comments'
 
   .html
-    = index && !post.excerpt.blank? ? post.excerpt_html : post.body_html
+    ~ index && !post.excerpt.blank? ? post.excerpt_html : post.body_html

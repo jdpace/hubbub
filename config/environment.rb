@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "oauth"
   config.gem "oauth-plugin"
   config.gem 'twitter'
+  config.gem 'feedzirra'
 
   # Deploy Related Gems
   # config.gem "vlad"
