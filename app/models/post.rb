@@ -28,12 +28,12 @@ class Post < ActiveRecord::Base
   protected
   
     def cache_html
-      blue_cloth = BlueCloth::new(body)
-      self.body_html = blue_cloth.to_html
+      markdown = RDiscount.new(body)
+      self.body_html = markdown.to_html
       
       unless excerpt.blank?
-        blue_cloth = BlueCloth::new(excerpt)
-        self.excerpt_html = blue_cloth.to_html
+        markdown = RDiscount.new(excerpt)
+        self.excerpt_html = markdown.to_html
       end
     end
   

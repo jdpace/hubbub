@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
   config.gem "will_paginate"
   config.gem "haml"
   config.gem "authlogic"
-  config.gem "bluecloth"
+  config.gem "rdiscount"
   config.gem "oauth"
   config.gem "oauth-plugin"
   config.gem 'twitter'
