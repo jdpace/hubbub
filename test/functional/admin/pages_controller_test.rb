@@ -117,7 +117,7 @@ class Admin::PagesControllerTest < ActionController::TestCase
         @page = Factory.build(:page)
         Page.expects(:find_by_url!).with(@page.to_param).returns(@page)
         @page.expects(:destroy).returns(true)
-        delete :destroy
+        delete :destroy, :id => @page.to_param
       end
       
       should_set_the_flash_to(/successfully destroyed/)
