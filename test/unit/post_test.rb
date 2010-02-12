@@ -16,7 +16,7 @@ class PostTest < ActiveSupport::TestCase
     end
     
     should 'cache the body html' do
-      assert_equal "<p>#{@post.body}</p>", @post.body_html
+      assert_equal "<p>#{@post.body}</p>\n", @post.body_html
     end
     
     should 'use the url for to_param' do

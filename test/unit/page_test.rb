@@ -11,7 +11,7 @@ class PageTest < ActiveSupport::TestCase
     end
     
     should 'cache the body html' do
-      assert_equal '<p>paragraph</p>', @page.body_html
+      assert_equal "<p>paragraph</p>\n", @page.body_html
     end
     
     should 'use its url as its param' do
