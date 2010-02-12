@@ -15,7 +15,7 @@ class Page < ActiveRecord::Base
   protected
   
     def cache_body_html
-      blue_cloth = BlueCloth::new(body)
-      self.body_html = blue_cloth.to_html
+      markdown = RDiscount.new(body)
+      self.body_html = markdown.to_html
     end
 end
